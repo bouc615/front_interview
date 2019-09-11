@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        color: #fff;
+        font-size: 24px;
+      }
+      .HolyGrail {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+      }
+
+      header,
+      footer {
+        background: #444;
+        height: 100px;
+      }
+
+      .HolyGrail-body {
+        display: flex;
+        flex: 1;
+        background: #ddd;
+      }
+      .HolyGrail-content {
+        flex: 1;
+        background: #aaa;
+      }
+      .HolyGrail-nav,
+      .HolyGrail-ads {
+        flex: 0 0 12em;
+      }
+
+      .HolyGrail-nav {
+        /* 移到左边 */
+        order: -1;
+        background: skyblue;
+      }
+      .HolyGrail-ads {
+        background: orangered;
+      }
+
+      @media (max-width: 768px) {
+        .HolyGrail-body {
+          flex-direction: column;
+          flex: 1;
+        }
+        .HolyGrail-nav,
+        .HolyGrail-ads,
+        .HolyGrail-content {
+          flex: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <body class="HolyGrail">
+      <header>#header</header>
+
+      <div class="HolyGrail-body">
+        <main class="HolyGrail-content">#center</main>
+        <nav class="HolyGrail-nav">#left</nav>
+        <aside class="HolyGrail-ads">#right</aside>
+      </div>
+
+      <footer>#FOOTER</footer>
+    </body>
+  </body>
+</html>
